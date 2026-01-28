@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Mouad Lemhadare - Data Science Engineer Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+      [x-cloak] { display: none !important; }
+      body { font-family: 'Inter', sans-serif; }
+      .timeline-dot { box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.1); }
+    </style>
+  </head>
+  
+  <body class="antialiased bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100" 
+        x-data="{ 
+          lang: 'fr', 
+          translations: {
+            fr: {
+              name: 'Mouad Lemhadare',
+              role: 'Ingénieur Data Science & IA | MLOps',
+              status: 'Recherche CDI — Septembre 2026',
+              intro: 'Ingénieur UTC avec 4 ans d\'expertise chez Schneider Electric.<br> Lead technique en digitalisation et optimisation industrielle end-to-end via des solutions d\'IA ',
+              nav_exp: 'Expériences & Impact',
+              nav_projects: 'Projets Académiques',
+              nav_edu: 'Formation',
+              btn_lang: 'English 🇺🇸',
+
+              // Expérience Pro - PFE
+              exp_pfe_h: 'Data Scientist Engineer (Apprentissage - PFE)',
+              exp_pfe_loc: 'Schneider Electric | Chalon-sur-Saône',
+              exp_pfe_date: 'Sep 2025 - Sep 2026',
+              exp_pfe_desc: 'Lead technique sur la transformation digitale via l\'optimisation des performances industrielles et déploiement de solutions IA end-to-end.',
+              exp_pfe_details: '• Direction technique du projet de réduction des coûts de non-qualité sur deux lignes de production via le développement de modèles de Machine Learning.<br>• Conception et industrialisation d\'un pipeline MLOps complet pour garantir la fiabilité et le monitoring des modèles en temps réel.<br>• Architecture de flux de données complexes (ETL Snaplogic) vers Amazon Redshift pour centraliser les données de production massives.<br>• Développement de dashboards BI haute fidélité (Tableau BI) pour le pilotage des KPIs critiques et l\'aide à la décision des équipes opérationnelles.<br>• Gestion de projet en mode Agile (Scrum), assurant la liaison entre les besoins métiers et les contraintes techniques IT.<br>• Lead sur les initiatives de transformation digitale du site et accompagnement au changement des équipes.',
+
+
+              // Expérience Pro - Bangkok
+              exp_bkk_h: 'Mobilité Internationale – Supply Chain Digitalization',
+              exp_bkk_loc: 'Schneider Electric | Bangkok, Thaïlande',
+              exp_bkk_date: 'Juil 2025 - Sep 2025',
+              exp_bkk_desc: 'Optimisation des flux et planification avancée en contexte multiculturel.',              
+              exp_bkk_details: '• Développement d’un système expert de forecasting et de planification digitale pour synchroniser les lignes internes avec le réseau de sous-traitants.<br>• Modélisation mathématique et utilisation de solveurs d’optimisation & système à base de règles pour réduire le WIP (Work In Progress) et maximiser l’utilisation des capacités machine.<br>• Intégration des contraintes de matières premières dans les modèles de planification pour sécuriser les délais de livraison client.<br>• Collaboration active au sein d’une équipe internationale.',
+             
+              // Expérience Pro - Alternance 3 ans
+              exp_3y_h: 'Data Scientist Engineer (Apprentissage)',
+              exp_3y_loc: 'Schneider Electric | Chalon-sur-Saône',
+              exp_3y_date: 'Sep 2022 - Juil 2025',
+              exp_3y_desc: 'Valorisation du patrimoine data et automatisation des processus industriels.',
+              exp_3y_details: '• Analyse de données et mise place de modèles de Machine Learning prédictifs visant à palier les dérives de fabrication et optimiser les rendements industriels.<br>• Création d\'un écosystème BI interactif (Tableau BI) pour la supervision stratégique du site et le suivi des gains de performance.<br>• Déploiement des premiers cycles de monitoring et de réentraînement des modèles pour maintenir une précision constante en production.',
+
+              // Projets Académiques
+              acad_title: 'Projets de Recherche & IA',
+              proj_med_h: 'Deep Learning Médical (Pathologies)',
+              proj_med_b: 'Recherche sur la détection d\'anomalies via des modèles de diffusion guidés (Basés sur le papier d\'OpenAI) et segmentation d\'images médicales (PyTorch & TensorFlow).',
+              proj_rag_h: 'GenAI : Agent Juridique Intelligent (RAG)',
+              proj_rag_b: 'Conception d\'un agent LLM capable d\'analyser des documents juridiques complexes grâce à une base de connaissances vectorielle alimentée par Web Scraping.',
+
+              edu_title: 'Formation',
+              utc_desc: 'Ingénieur Génie Informatique - Spécialité IA & Science des Données.',
+              insa_desc: 'Cycle préparatoire intégré (STPI).',
+              bac_desc: 'Baccalauréat Scientifique, Mention Très Bien.',
+              contact_title: 'Contact & Réseaux',
+              footer_copy: '© 2026 Mouad Lemhadare'
+            },
+            en: {
+              name: 'Mouad Lemhadare',
+              role: 'Data Science & AI Engineer | MLOps',
+              status: 'Seeking Full-time Position — Sept 2026',
+              intro: 'UTC Engineering student with 4 years of expertise at Schneider Electric. Specialized in end-to-end industrial optimization: Project management/dev from Data Engineering (Snaplogic, Redshift, BI visualisation) to ML deployment with MLOps & monitoring.',
+              nav_exp: 'Experience & Impact',
+              nav_projects: 'Academic Projects',
+              nav_edu: 'Education',
+              btn_lang: 'Français 🇫🇷',
+
+
+              // Experience Pro - PFE (Master's Thesis)
+              exp_pfe_h: 'Data Science Engineer (Apprenticeship - Master Thesis)',
+              exp_pfe_loc: 'Schneider Electric | France',
+              exp_pfe_date: 'Sep 2025 - Sep 2026',
+              exp_pfe_desc: 'Technical Lead on digital transformation through industrial performance optimization and end-to-end AI deployment.',
+              exp_pfe_details: '• Technical lead for the non-quality cost reduction project across two production lines via Machine Learning model development.<br>• Design and industrialization of a comprehensive MLOps pipeline to ensure real-time model reliability and monitoring.<br>• Architecting complex data flows (ETL Snaplogic) to Amazon Redshift to centralize massive industrial production data.<br>• Development of high-fidelity BI dashboards (Tableau BI) for critical KPI steering and operational decision support.<br>• Project management using Agile (Scrum) methodology, bridging the gap between business needs and IT technical constraints.<br>• Leading site-wide digital transformation initiatives and managing organizational change.',
+
+              // Experience Pro - Bangkok
+              exp_bkk_h: 'International Mobility – Supply Chain Digitalization',
+              exp_bkk_loc: 'Schneider Electric | Bangkok, Thailand',
+              exp_bkk_date: 'Jul 2025 - Sep 2025',
+              exp_bkk_desc: 'Flow optimization and advanced planning within a multicultural industrial context.',
+              exp_bkk_details: '• Development of an expert forecasting and digital planning system to synchronize internal production lines with the subcontractor network.<br>• Mathematical modeling and use of optimization solvers & rule-based systems to reduce WIP (Work In Progress) and maximize machine capacity utilization.<br>• Integration of raw material constraints into planning models to secure and optimize customer delivery lead times.<br>• Active collaboration and project contribution within a global international team.',
+
+              // Experience Pro - 3-Year Apprenticeship
+              exp_3y_h: 'Data Science Engineer (Apprenticeship)',
+              exp_3y_loc: 'Schneider Electric | France',
+              exp_3y_date: 'Sep 2022 - Jul 2025',
+              exp_3y_desc: 'Leveraging data assets and automating industrial processes through AI.',
+              exp_3y_details: '• Data analysis and implementation of predictive Machine Learning models aimed at addressing manufacturing drifts and optimizing industrial yields.<br>• Creation of an interactive BI ecosystem (Tableau BI) for strategic site supervision and real-time performance tracking.<br>• Deployment of the initial monitoring and model retraining cycles to maintain consistent accuracy and reliability in production.',
+
+              
+              acad_title: 'Academic Research & AI',
+              proj_med_h: 'Medical Deep Learning',
+              proj_med_b: 'Research on anomaly detection using guided diffusion models (based on : OpenAI paper) and medical image segmentation (PyTorch & TensorFlow).',
+              proj_rag_h: 'GenAI: Intelligent Legal Agent (RAG)',
+              proj_rag_b: 'Design of an LLM agent capable of analyzing complex legal documents using a vector database powered by Web Scraping.',
+
+              edu_title: 'Education',
+              utc_desc: 'Master of Engineering in CS - AI & Data Science Specialist.',
+              insa_desc: 'Integrated Preparatory Cycle.',
+              bac_desc: 'Scientific Baccalaureate, Highest Honors.',
+              contact_title: 'Get in Touch',
+              footer_copy: '© 2026 Mouad Lemhadare'
+            }
+          }
+        }">
+
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+        <span class="font-black text-xl tracking-tighter uppercase" x-text="translations[lang].name"></span>
+        <button @click="lang = (lang === 'fr' ? 'en' : 'fr')" 
+                class="text-[10px] font-bold uppercase tracking-[0.2em] bg-zinc-900 dark:bg-zinc-100 text-white dark:text-black px-4 py-2 rounded-full transition-transform active:scale-95"
+                x-text="translations[lang].btn_lang">
+        </button>
+      </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-24">
+      
+      <section class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="shrink-0 relative group">
+          <div class="absolute -inset-2 bg-gradient-to-tr from-purple-600 to-blue-500 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <img src="assets/profile_photo.jpg" alt="Mouad" 
+               class="relative w-48 h-48 rounded-full object-cover border-4 border-white dark:border-zinc-900 shadow-2xl"
+               style="image-rendering: -webkit-optimize-contrast;">
+        </div>
+        <div class="space-y-6 text-center md:text-left">
+          <h1 class="text-5xl md:text-6xl font-black tracking-tight" x-text="translations[lang].name"></h1>
+          <p class="text-2xl font-semibold text-purple-600 dark:text-purple-400" x-text="translations[lang].role"></p>
+          <p class="text-zinc-500 dark:text-zinc-400 max-w-2xl text-lg leading-relaxed" x-text="translations[lang].intro"></p>
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <span class="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-xl text-sm font-bold shadow-sm" x-text="translations[lang].status"></span>
+            <span class="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 rounded-xl text-sm font-bold">📍 Mobilité France</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xs font-black uppercase tracking-[0.3em] text-zinc-400 mb-8" x-text="translations[lang].skills_title"></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-6 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm">
+            <h3 class="font-bold text-purple-600 mb-4 flex justify-between items-center">
+              Data Science <span class="text-[10px] bg-purple-100 dark:bg-purple-900/30 px-2 py-0.5 rounded text-purple-700">Advanced</span>
+            </h3>
+            <ul class="space-y-2">
+              <li class="text-xs flex justify-between"><span>Python</span> <span class="text-zinc-400">Advanced</span></li>
+              <li class="text-xs flex justify-between"><span>Data Analysis</span> <span class="text-zinc-400">Advanced</span></li>
+              <li class="text-xs flex justify-between"><span>Statistics</span> <span class="text-zinc-400">Advanced</span></li>
+              <li class="text-xs flex justify-between"><span>Machine Learning</span> <span class="text-zinc-400">Advanced</span></li>
+              <li class="text-xs flex justify-between"><span>Database & SQL</span> <span class="text-zinc-400">Expert</span></li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm">
+            <h3 class="font-bold text-blue-600 mb-4 flex justify-between items-center">
+              Data & Viz <span class="text-[10px] bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 rounded text-blue-700">Advanced</span>
+            </h3>
+            <ul class="space-y-2">
+              <li class="text-xs flex justify-between"><span>Tableau BI / Power BI</span> <span class="text-zinc-400">Expert</span></li>
+              <li class="text-xs flex justify-between"><span>Cloud (AWS/Azure)</span> <span class="text-zinc-400">Intermediate</span></li>
+              <li class="text-xs flex justify-between"><span>ETL (Snaplogic)</span> <span class="text-zinc-400">Intermediate</span></li>
+
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm">
+            <h3 class="font-bold text-green-600 mb-4 flex justify-between items-center">
+              Management & Soft Skills <span class="text-[10px] bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded text-green-700">Expert</span>
+            </h3>
+            <ul class="space-y-2">
+              <li class="text-xs flex justify-between"><span>Project Management</span> 
+              <li class="text-xs flex justify-between"><span>Change Management</span> 
+              <li class="text-xs flex justify-between"><span>Critical thinking</span>
+              <li class="text-xs flex justify-between"><span>Problem solving</span>
+
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm border-t-4 border-t-purple-500">
+            <h3 class="font-bold text-zinc-800 dark:text-zinc-100 mb-4 uppercase text-xs tracking-widest" x-text="lang === 'fr' ? 'Langues' : 'Languages'"></h3>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between">
+                <span class="text-sm font-semibold">French</span>
+                <span class="text-[10px] font-black text-purple-600 uppercase" x-text="lang === 'fr' ? 'Maternel' : 'Native'"></span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-sm font-semibold">Arab</span>
+                <span class="text-[10px] font-black text-purple-600 uppercase" x-text="lang === 'fr' ? 'Maternel' : 'Native'"></span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-sm font-semibold">English</span>
+                <span class="text-[10px] font-black text-blue-600 uppercase">Level C1</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+          <span class="w-12 h-1 bg-purple-600 rounded-full"></span>
+          <span x-text="translations[lang].nav_exp"></span>
+        </h2>
+        
+        <div class="relative pl-8 border-l-2 border-zinc-200 dark:border-zinc-800 space-y-16">
+          
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-purple-600 border-4 border-zinc-50 dark:border-zinc-950 shadow-xl"></div>
+            <div class="flex flex-col md:flex-row justify-between items-baseline gap-2 mb-4">
+              <h3 class="text-2xl font-bold" x-text="translations[lang].exp_pfe_h"></h3>
+              <span class="text-sm font-mono font-bold bg-purple-100 dark:bg-purple-900/30 text-purple-600 px-3 py-1 rounded-lg" x-text="translations[lang].exp_pfe_date"></span>
+            </div>
+            <p class="text-purple-600 font-bold text-sm mb-2" x-text="translations[lang].exp_pfe_loc"></p>
+            <p class="text-zinc-500 dark:text-zinc-400 mb-4 italic text-sm" x-text="translations[lang].exp_pfe_desc"></p>
+            <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+              <p class="text-sm leading-relaxed space-y-2" x-html="translations[lang].exp_pfe_details"></p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-blue-500 border-4 border-zinc-50 dark:border-zinc-950"></div>
+            <div class="flex flex-col md:flex-row justify-between items-baseline gap-2 mb-4">
+              <h3 class="text-2xl font-bold italic" x-text="translations[lang].exp_bkk_h"></h3>
+              <span class="text-sm font-mono font-bold text-zinc-400" x-text="translations[lang].exp_bkk_date"></span>
+            </div>
+            <p class="text-blue-500 font-bold text-sm mb-2" x-text="translations[lang].exp_bkk_loc"></p>
+            <p class="text-zinc-500 dark:text-zinc-400 mb-4 italic text-sm" x-text="translations[lang].exp_bkk_desc"></p>
+            <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+              <p class="text-sm leading-relaxed space-y-2" x-html="translations[lang].exp_bkk_details"></p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-zinc-400 border-4 border-zinc-50 dark:border-zinc-950"></div>
+            <div class="flex flex-col md:flex-row justify-between items-baseline gap-2 mb-4">
+              <h3 class="text-2xl font-bold" x-text="translations[lang].exp_3y_h"></h3>
+              <span class="text-sm font-mono font-bold text-zinc-400" x-text="translations[lang].exp_3y_date"></span>
+            </div>
+            <p class="text-zinc-500 font-bold text-sm mb-2" x-text="translations[lang].exp_3y_loc"></p>
+            <p class="text-zinc-500 dark:text-zinc-400 mb-4 italic text-sm" x-text="translations[lang].exp_3y_desc"></p>
+            <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+              <p class="text-sm leading-relaxed space-y-2" x-html="translations[lang].exp_3y_details"></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+          <span class="w-12 h-1 bg-blue-500 rounded-full"></span>
+          <span x-text="translations[lang].acad_title"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="group p-8 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl hover:border-blue-500 transition-all duration-300 shadow-sm">
+            <div class="flex justify-between items-start mb-6">
+              <div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 rounded-2xl">
+                <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3" x-text="translations[lang].proj_med_h"></h3>
+            <p class="text-zinc-500 text-sm leading-relaxed" x-text="translations[lang].proj_med_b"></p>
+          </div>
+
+          <div class="group p-8 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl hover:border-purple-500 transition-all duration-300 shadow-sm">
+            <div class="flex justify-between items-start mb-6">
+              <div class="p-3 bg-purple-50 dark:bg-purple-900/20 text-purple-600 rounded-2xl">
+                <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3" x-text="translations[lang].proj_rag_h"></h3>
+            <p class="text-zinc-500 text-sm leading-relaxed" x-text="translations[lang].proj_rag_b"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+          <span class="w-12 h-1 bg-zinc-200 rounded-full"></span>
+          <span x-text="translations[lang].edu_title"></span>
+        </h2>
+        <div class="space-y-6">
+          
+          <div class="p-8 bg-zinc-100 dark:bg-zinc-900 rounded-3xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+              <div class="w-16 h-16 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center p-2 shadow-sm shrink-0">
+              </div>
+              <div>
+                <h3 class="font-black text-xl uppercase tracking-tight">UTC Compiègne</h3>
+                <p class="text-zinc-500 font-medium" x-text="translations[lang].utc_desc"></p>
+              </div>
+            </div>
+            <span class="text-sm font-black text-zinc-400 uppercase tracking-widest bg-white/50 dark:bg-black/20 px-4 py-2 rounded-xl">2023 — 2026</span>
+          </div>
+
+          <div class="p-8 bg-zinc-100 dark:bg-zinc-900 rounded-3xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 opacity-80">
+            <div class="flex items-center gap-6">
+              <div class="w-16 h-16 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center p-2 shadow-sm shrink-0">
+              </div>
+              <div>
+                <h3 class="font-black text-xl uppercase tracking-tight">INSA Rouen Normandie</h3>
+                <p class="text-zinc-500 font-medium" x-text="translations[lang].insa_desc"></p>
+              </div>
+            </div>
+            <span class="text-sm font-black text-zinc-400 uppercase tracking-widest bg-white/50 dark:bg-black/20 px-4 py-2 rounded-xl">2020 — 2022</span>
+          </div>
+
+          <div class="p-8 bg-zinc-100 dark:bg-zinc-900 rounded-3xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 opacity-80">
+            <div class="flex items-center gap-6">
+              <div class="w-16 h-16 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center p-2 shadow-sm shrink-0">
+              </div>
+              <div>
+                <h3 class="font-black text-xl uppercase tracking-tight">High School Jamal Dorra</h3>
+                <p class="text-zinc-500 font-medium" x-text="translations[lang].bac_desc"></p>
+              </div>
+            </div>
+            <span class="text-sm font-black text-zinc-400 uppercase tracking-widest bg-white/50 dark:bg-black/20 px-4 py-2 rounded-xl">2018 — 2019</span>
+          </div>
+
+
+        </div>
+      </section>
+
+      <footer class="pt-24 pb-12 border-t border-zinc-200 dark:border-zinc-800 text-center space-y-10">
+        <h2 class="text-4xl font-black tracking-tighter uppercase" x-text="translations[lang].contact_title"></h2>
+        <div class="flex flex-wrap justify-center gap-12 text-xs font-black uppercase tracking-[0.2em]">
+          <a href="mailto:mlemhadare@gmail.com" class="hover:text-purple-600 transition underline underline-offset-8">Email</a>
+          <a href="https://linkedin.com/in/mouad-lemhadare/" class="hover:text-purple-600 transition underline underline-offset-8">LinkedIn</a>
+          <a href="https://github.com/mlemhadare" class="hover:text-purple-600 transition underline underline-offset-8">GitHub</a>
+        </div>
+        <p class="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.4em]" x-text="translations[lang].footer_copy"></p>
+      </footer>
+
+    </main>
+  </body>
+</html>
